@@ -1,0 +1,14 @@
+---
+- name: Get memory details from remote machine
+  hosts: all
+  gather_facts: true
+
+  tasks:
+    - name: Show total memory
+      ansible.builtin.debug:
+        msg: "Total Memory: {{ ansible_memtotal_mb }} MB"
+
+    - name: Show free memory
+      ansible.builtin.debug:
+        msg: "Free Memory: {{ ansible_memfree_mb }} MB"
+
