@@ -1,0 +1,9 @@
+---
+- name: Print Hello from remote machine
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Say Hello from remote machine
+      ansible.builtin.shell: echo "Hello from remote machine"
+
